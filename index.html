@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+    <div class="buttons_container">
+      <div class="navbar">
+        <ul>
+          <li>
+            <div class="heading"><h2>Algo<span class="span">Vizer</span></h2></div>
+          </li>
+          <li>
+            <label for="pace" class="pacetext">Sorting Pace:</label>
+            <select name="" id="speed" class="pace">
+             
+              <option value="100">Slow</option>
+              <option value="50">Medium</option>
+              <option value="5">Fast</option>
+            </select>
+          </li>
+          <li>
+            <label for="algo" class="algotext">Sorting Algo:</label>
+            <select name="" id="algo" class="algo">
+              <option value="bubble">Bubble Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="heap">Heap Sort</option>
+              <option value="merge">Merge Sort</option>
+              <option value="quick">Quick Sort</option>
+            </select>
+          </li>
+          <li>
+            <!-- <input
+              type="range"
+              id="slider"
+              min="50"
+              max="115"
+              step="5"
+              value="50"
+            /> -->
+            <div>
+              <label for="" class="algotext">Array size:</label>
+              <span id="rangeValue" class="ran">50</span>
+              <Input class="range" id="slider" type="range" name "" value="50" min="50" max="115" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+          </div>
+          </li>
+          <li><button id="randomize_array_btn" class="random">Randomize Array</button></li>
+          <li><button id="sort_btn" class="random">SORT</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      
+
+      <!-- <label for="slider">Array Size:</label> -->
+
+      <div class="rotate">
+        <div class="bars_container" id="bars_container"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script type="text/javascript">
+      function rangeSlide(value) {
+          document.getElementById('rangeValue').innerHTML = value;
+      }
+  </script>
+  </body>
+</html>
